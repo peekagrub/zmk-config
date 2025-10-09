@@ -39,6 +39,13 @@
             tapping-term-ms = <200>;
             bindings = <&kp RSHIFT>, <&caps_word>;
         };
+
+        td2: tap_dance_2 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     keymap {
@@ -57,7 +64,7 @@
 &kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T									        &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G								            &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &cdl      &kp Z  &kp X    &kp C    &kp V     &kp B			  &kp C_MUTE     &none          &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &cdr
-                 &kp LGUI &kp LALT &kp LCTRL &lt LOWER LSHFT  &mt SPACE RET  &mt RET SPACE  &lt RAISE ESC    &kp RCTRL &kp RALT &kp RGUI
+                 &kp LGUI &kp LALT &kp LCTRL &td2 LSHFT LOWER &mt SPACE RET  &mt RET SPACE  &td2 ESC RAISE   &kp RCTRL &kp RALT &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
