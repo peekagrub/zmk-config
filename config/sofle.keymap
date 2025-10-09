@@ -40,24 +40,24 @@
             bindings = <&kp RSHIFT>, <&caps_word>;
         };
 
-        td_min: tap_dance_min {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp S>, <&kp MINUS>;
-        };
-        td_pls: tap_dance_plus {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp D>, <&kp PLUS>;
-        };
-        td_equ: tap_dance_equ {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp F>, <&kp EQUAL>;
-        };
+        // td_min: tap_dance_min {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp S>, <&kp MINUS>;
+        // };
+        // td_pls: tap_dance_plus {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp D>, <&kp PLUS>;
+        // };
+        // td_equ: tap_dance_equ {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp F>, <&kp EQUAL>;
+        // };
 
         td_low: tap_dance_low {
             compatible = "zmk,behavior-tap-dance";
@@ -85,11 +85,11 @@
 // | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
 //               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
             bindings = <
-&kp GRAVE &kp N1 &kp N2	   &kp N3   &kp N4    &kp N5								&kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
-&kp ESC   &kp Q  &kp W	   &kp E    &kp R	  &kp T									&kp Y     &kp U     &kp I     &kp O    &kp P    &kp BSPC
-&kp TAB   &kp A  &td_min   &td_pls  &td_equ   &kp G								    &kp H     &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-&cdl      &kp Z  &kp X     &kp C    &kp V     &kp B	  &kp C_MUTE     &none          &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &cdr
-                 &kp LGUI  &kp LALT &kp LCTRL &td_low &mt SPACE RET  &mt RET SPACE  &td_rai   &kp RCTRL &kp RALT  &kp RGUI
+&kp GRAVE &kp N1 &kp N2	       &kp N3      &kp N4       &kp N5  								&kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
+&kp ESC   &kp Q  &kp W	       &kp E       &kp R	    &kp T									&kp Y     &kp U     &kp I     &kp O    &kp P    &kp BSPC
+&kp TAB   &kp A  &mt MINUS S   &mt PLUS D  &mt EQUAL F  &kp G								    &kp H     &kp J     &kp K     &kp L    &kp SEMI &kp SQT
+&cdl      &kp Z  &kp X         &kp C       &kp V        &kp B	  &kp C_MUTE     &none          &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &cdr
+                 &kp LGUI      &kp LALT    &kp LCTRL    &td_low   &mt SPACE RET  &mt RET SPACE  &td_rai   &kp RCTRL &kp RALT  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
