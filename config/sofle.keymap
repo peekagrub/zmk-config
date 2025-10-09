@@ -25,6 +25,21 @@
             then-layer = <ADJUST>;
         };
     };
+	
+    behaviors {
+        cdl: tap_dance_0 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp LSHIFT>, <&caps_word>;
+        };
+        cdr: tap_dance_1 {
+            compatible = "zmk,behavior-tap-dance";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&kp RSHIFT>, <&caps_word>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
@@ -41,8 +56,8 @@
 &kp GRAVE &kp N1 &kp N2   &kp N3   &kp N4    &kp N5									        &kp N6 &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
 &kp ESC   &kp Q  &kp W    &kp E    &kp R     &kp T									        &kp Y  &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp TAB   &kp A  &kp S    &kp D    &kp F     &kp G								            &kp H  &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-&kp LSHFT &kp Z  &kp X    &kp C    &kp V     &kp B			  &kp C_MUTE     &none          &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &kp RSHFT
-                 &kp LGUI &kp LALT &kp LCTRL &lt LOWER LSHFT  &mt SPACE RET  &kp RET SPACE  &lt RAISE ESC    &kp RCTRL &kp RALT  &kp RGUI
+&cdl      &kp Z  &kp X    &kp C    &kp V     &kp B			  &kp C_MUTE     &none          &kp N  &kp M     &kp COMMA &kp DOT  &kp FSLH &cdr
+                 &kp LGUI &kp LALT &kp LCTRL &lt LOWER LSHFT  &mt SPACE RET  &mt RET SPACE  &lt RAISE ESC    &kp RCTRL &kp RALT &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
