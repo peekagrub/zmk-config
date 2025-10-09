@@ -17,7 +17,7 @@
 
 / {
 
-   / Activate ADJUST layer by pressing raise and lower
+   // Activate ADJUST layer by pressing raise and lower
     conditional_layers {
         compatible = "zmk,conditional-layers";
         adjust_layer {
@@ -31,7 +31,7 @@
 
         default_layer {
             display-name = "grub";
-/ ------------------------------------------------------------------------------------------------------------
+// ------------------------------------------------------------------------------------------------------------
 // |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  DEL  |
 // |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
 // |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
@@ -99,6 +99,7 @@
 &bt BT_CLR        &bt BT_SEL 0    &bt BT_SEL 1    &bt BT_SEL 2    &bt BT_SEL 3		   &bt BT_SEL 4                            &none &none	    &none	    &none &none &none
 &ext_power EP_TOG &rgb_ug RGB_HUD &rgb_ug RGB_HUI &rgb_ug RGB_SAD &rgb_ug RGB_SAI	   &rgb_ug RGB_EFF                         &none &none	    &none	    &none &none &none
 &none             &rgb_ug RGB_BRD &rgb_ug RGB_BRI &none           &bootloader          &sys_reset                              &none &sys_reset &bootloader &none &none &none
+
 &none             &none           &none           &none           &none				   &none            &rgb_ug RGB_TOG &none  &none &none	    &none	    &none &none &none
                                   &none           &none           &none				   &none            &none           &none  &none &none	    &none	    &none
             >;
