@@ -13,7 +13,8 @@
 #define BASE 0
 #define LOWER 1
 #define RAISE 2
-#define ADJUST 3
+#define SYMBOLS 3
+#define ADJUST 4
 
 / {
 
@@ -63,7 +64,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp LSHIFT>, <&sl 1>;
+            bindings = <&sk LSHIFT>, <&sl 1>;
         };
         td_rai: tap_dance_rai {
             compatible = "zmk,behavior-tap-dance";
@@ -138,6 +139,25 @@
 &trans     &kp LALT     &kp LCTRL    &kp LSHFT    &kp ESC      &kp CLCK                      &kp PG_DN &kp LEFT	   &kp DOWN &kp RIGHT &kp DEL &kp BSPC
 &trans     &kp K_UNDO   &kp K_CUT    &kp K_COPY   &kp K_PASTE  &trans        &trans  &trans  &trans    &trans	   &trans   &trans    &trans  &trans
                         &trans       &trans       &trans       &trans        &trans  &trans  &trans    &trans	   &trans   &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
+        symbols_layer {
+            display-name = "mii";
+// ------------------------------------------------------------------------------------------------------------
+// |       |     |     |      |      |      |                   |      |       |       |      |       |       |
+// |       |     |  #  |  <   |  >   |      |                   |      |  {    |  }    |  ~   |       |       |
+// |       |  /  |  =  |  -   |  +   |  '   |                   |  "   |  (    |  )    |  [   |   ]   |       |
+// |       |  *  |     |      |      |      |        |  |       |      |       |       |      |       |       |
+//               |     |      |      |      |        |  |       |      |       |       |      |
+            bindings = <
+&trans    &trans	&trans	  &trans	  &trans    &trans                    &trans    &trans   &trans    &trans    &trans    &trans
+&trans	  &trans	&kp HASH  &kp LT	  &kp GT    &trans                    &trans    &kp LBRC &kp RBRC  &kp TILDE &trans    &trans
+&trans    &kp FSLSH &kp EQUAL &kp MINU    &kp PLUS  &kp SQT                   &kp DQT   &kp LPAR &kp RPAR  &kp LBKT  &kp RBKT  &trans
+&trans    &kp STAR	&trans	  &trans	  &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans    &kp SEMI    &trans
+                    &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
