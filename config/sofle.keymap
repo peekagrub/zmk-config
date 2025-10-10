@@ -64,13 +64,13 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sk LSHIFT>, <&sl 1>;
+            bindings = <&sk LSHIFT>, <&sl 1>, <&sl 3>;
         };
         td_rai: tap_dance_rai {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&kp ESC>, <&sl 2>;
+            bindings = <&kp ESC>, <&sl 2>, <&sl 3>;
         };
 
         mt_slow: mod_slow {
