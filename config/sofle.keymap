@@ -45,7 +45,7 @@
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
             tapping-term-ms = <200>;
-            bindings = <&sk LSHIFT>, <&sl LOWER>;
+            bindings = <&kp LSHIFT>, <&sl LOWER>;
         };
         td_rai: tap_dance_rai {
             compatible = "zmk,behavior-tap-dance";
