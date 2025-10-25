@@ -54,18 +54,18 @@
             bindings = <&kp ESC>, <&sl RAISE>;
         };
 
-        td_enter: tap_dance_enter {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp ENTER>, <&sl SYMBOLS>;
-        };
-        td_space: tap_dance_space {
-            compatible = "zmk,behavior-tap-dance";
-            #binding-cells = <0>;
-            tapping-term-ms = <200>;
-            bindings = <&kp SPACE>, <&sl SYMBOLS>;
-        };
+        // td_enter: tap_dance_enter {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp ENTER>, <&sl SYMBOLS>;
+        // };
+        // td_space: tap_dance_space {
+        //     compatible = "zmk,behavior-tap-dance";
+        //     #binding-cells = <0>;
+        //     tapping-term-ms = <200>;
+        //     bindings = <&kp SPACE>, <&sl SYMBOLS>;
+        // };
         td_lctrl: tap_dance_lctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -96,7 +96,7 @@
 &kp ESC   &kp Q  &kp W		&kp E       &kp R	    &kp T								&kp Y     &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp TAB   &kp A  &kp S		&kp D		&kp F		&kp G								&kp H     &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &cdl      &kp Z  &kp X		&kp C       &kp V       &kp B     &kp C_MUTE    &none       &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &cdr
-                 &kp LGUI	&kp LALT    &td_lctrl   &td_low   &td_enter		&td_space   &td_rai   &td_rctrl &kp RALT  &kp RGUI
+                 &kp LGUI	&kp LALT    &td_lctrl   &td_low   &kp ENTER		&kp SPACE   &td_rai   &td_rctrl &kp RALT  &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
