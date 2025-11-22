@@ -15,7 +15,8 @@
 #define LOWER 1
 #define RAISE 2
 #define SYMBOLS 3
-#define ADJUST 4
+#define GAMING 4
+#define ADJUST 5
 
 / {
 
@@ -55,18 +56,6 @@
             bindings = <&kp ESC>, <&sl RAISE>;
         };
 
-        // td_enter: tap_dance_enter {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <200>;
-        //     bindings = <&kp ENTER>, <&sl SYMBOLS>;
-        // };
-        // td_space: tap_dance_space {
-        //     compatible = "zmk,behavior-tap-dance";
-        //     #binding-cells = <0>;
-        //     tapping-term-ms = <200>;
-        //     bindings = <&kp SPACE>, <&sl SYMBOLS>;
-        // };
         td_lctrl: tap_dance_lctrl {
             compatible = "zmk,behavior-tap-dance";
             #binding-cells = <0>;
@@ -87,16 +76,16 @@
         default_layer {
             display-name = "grub";
 // ------------------------------------------------------------------------------------------------------------
-// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  DEL  |
-// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
-// |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
-// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
-//               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+// |   `   |  1  |  2  |  3   |  4   |  5   |                    |  6   |  7    |  8    |  9   |   0   |  DEL  |
+// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                    |  Y   |  U    |  I    |  O   |   P   | BKSPC |
+// |  TAB  |  A  |  S  |  D   |  F   |  G   |                    |  H   |  J    |  K    |  L   |   ;   |   '   |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  | GAMING |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+//               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE  | RAISE| CTRL  | ALT   | GUI  |
             bindings = <
 &kp GRAVE &kp N1 &kp N2		&kp N3      &kp N4      &kp N5								&kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
 &kp ESC   &kp Q  &kp W		&kp E       &kp R	    &kp T								&kp Y     &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp TAB   &kp A  &kp S		&kp D		&kp F		&kp G								&kp H     &kp J     &kp K     &kp L    &kp SEMI &kp SQT
-&cdl      &kp Z  &kp X		&kp C       &kp V       &kp B     &kp C_MUTE    &none       &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &cdr
+&cdl      &kp Z  &kp X		&kp C       &kp V       &kp B     &kp C_MUTE    &tog GAMING &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &cdr
                  &kp LGUI	&kp LALT    &td_lctrl   &td_low   &kp ENTER		&kp SPACE   &td_rai   &td_rctrl &kp RALT  &kp RGUI
             >;
 
@@ -161,6 +150,24 @@
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
         };
 
+        gaming_layer {
+// ------------------------------------------------------------------------------------------------------------
+// |   `   |  1  |  2  |  3   |  4   |  5   |                   |  6   |  7    |  8    |  9   |   0   |  DEL  |
+// |  ESC  |  Q  |  W  |  E   |  R   |  T   |                   |  Y   |  U    |  I    |  O   |   P   | BKSPC |
+// |  TAB  |  A  |  S  |  D   |  F   |  G   |                   |  H   |  J    |  K    |  L   |   ;   |   '   |
+// | SHIFT |  Z  |  X  |  C   |  V   |  B   |  MUTE  |  |       |  N   |  M    |  ,    |  .   |   /   | SHIFT |
+//               | GUI | ALT  | CTRL | LOWER|  ENTER |  | SPACE | RAISE| CTRL  | ALT   | GUI  |
+            bindings = <
+&kp GRAVE &kp N1 &kp N2		&kp N3      &kp N4      &kp N5								&kp N6    &kp N7    &kp N8    &kp N9   &kp N0   &kp DEL
+&kp ESC   &kp Q  &kp W		&kp E       &kp R	    &kp T								&kp Y     &kp U     &kp I     &kp O    &kp P    &kp BSPC
+&kp TAB   &kp A  &kp S		&kp D		&kp F		&kp G								&kp H     &kp J     &kp K     &kp L    &kp SEMI &kp SQT
+&cdl      &kp Z  &kp X		&kp C       &kp V       &kp B     &kp C_MUTE    &tog GAMING &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &cdr
+                 &kp LGUI	&kp LALT    &kp LCTRL   &kp LSHFT &kp ENTER		&kp SPACE   &kp RSHFT &kp RCTRL &kp RALT  &kp RGUI
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
+        };
+
         adjust_layer {
 // ----------------------------------------------------------------------------------------------------------------------------
 // | BTCLR   |  BT1    |  BT2    |   BT3   |   BT4   |   BT5   |                  |      |      |       |      |       |       |
@@ -177,6 +184,5 @@
                                   &none           &none           &none				   &none            &none           &none  &none &none	    &none	    &none
             >;
         };
-
     };
 };
