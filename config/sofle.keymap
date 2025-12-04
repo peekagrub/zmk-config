@@ -180,7 +180,7 @@
 &trans  &trans    &trans	&trans    &trans     &trans						&trans   &trans  &trans  &trans  &trans  &trans
 &trans  &trans    &trans	&trans    &trans     &trans						&trans   &trans  &trans  &trans  &trans  &trans
 &trans  &kp DOWN  &kp LEFT	&kp UP	  &kp RIGHT  &trans						&trans   &trans  &trans  &trans  &trans  &trans
-&trans  &trans    &trans	&trans    &trans     &trans  &transE    &trans  &trans   &trans  &trans  &trans  &trans  &trans
+&trans  &trans    &trans	&trans    &trans     &trans  &trans     &trans  &trans   &trans  &trans  &trans  &trans  &trans
                   &trans	&trans    &trans     &trans  &trans		&trans  &trans   &trans  &trans  &trans
             >;
 
