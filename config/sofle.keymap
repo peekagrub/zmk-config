@@ -141,11 +141,11 @@
 // |       |  *  |     |      |      |      |        |  |       |      |       |       |      |       |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&trans    &trans	&trans	  &trans	  &trans    &trans                    &trans    &trans   &trans    &trans       &trans    &trans
-&trans	  &trans	&kp HASH  &kp trans	  &kp trans &trans                    &trans    &kp LBRC &kp RBRC  &kp K_CMENU  &trans    &trans
-&trans    &kp BSLH  &kp EQUAL &kp MINUS   &kp PLUS  &kp SQT                   &kp DQT   &kp LPAR &kp RPAR  &kp LBKT     &kp RBKT  &trans
-&trans    &kp STAR	&trans	  &trans	  &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans       &kp SEMI  &trans
-                    &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans
+&trans    &trans	&trans	  &trans	 &trans    &trans                    &trans    &trans   &trans    &trans       &trans    &trans
+&trans	  &trans	&kp HASH  &trans	 &trans    &trans                    &trans    &kp LBRC &kp RBRC  &kp K_CMENU  &trans    &trans
+&trans    &kp BSLH  &kp EQUAL &kp MINUS  &kp PLUS  &kp SQT                   &kp DQT   &kp LPAR &kp RPAR  &kp LBKT     &kp RBKT  &trans
+&trans    &kp STAR	&trans	  &trans	 &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans       &kp SEMI  &trans
+                    &trans    &trans     &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
