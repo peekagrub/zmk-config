@@ -117,7 +117,7 @@
             display-name = "maw";
 // ------------------------------------------------------------------------------------------------------------
 // | BTCLR | BT1  | BT2  |  BT3  |  BT4  |  BT5 |                |      |      |       |      |       |       |
-// |       | INS  | PSCR | GUI   |       |      |                | PGUP |      |   ^   |      |       |       |
+// |       | INS  | PSCR | COMP  |       |      |                | PGUP | HOME |   ^   | END  |       |       |
 // |       | ALT  | CTRL | SHIFT | PAUSE | CAPS |                | PGDN |   <- |   v   |  ->  |  DEL  | BKSPC |
 // |       | UNDO | CUT  | COPY  | PASTE |      |      |  |      |      |      |       |      |       |       |
 //                |      |       |       |      |      |  |      |      |      |       |      |
@@ -136,15 +136,15 @@
             display-name = "mii";
 // ------------------------------------------------------------------------------------------------------------
 // |       |     |     |      |      |      |                   |      |       |       |      |       |       |
-// |       |     |  #  |  <   |  >   |      |                   |      |  {    |  }    |  ~   |       |       |
-// |       |  /  |  =  |  -   |  +   |  '   |                   |  "   |  (    |  )    |  [   |   ]   |       |
+// |       |     |  #  |      |      |      |                   |      |  {    |  }    | COMP |       |       |
+// |       |  \  |  =  |  -   |  +   |  '   |                   |  "   |  (    |  )    |  [   |   ]   |       |
 // |       |  *  |     |      |      |      |        |  |       |      |       |       |      |       |       |
 //               |     |      |      |      |        |  |       |      |       |       |      |
             bindings = <
-&trans    &trans	&trans	  &trans	  &trans    &trans                    &trans    &trans   &trans    &trans    &trans    &trans
-&trans	  &trans	&kp HASH  &kp LT	  &kp GT    &trans                    &trans    &kp LBRC &kp RBRC  &kp TILDE &trans    &trans
-&trans    &kp FSLH  &kp EQUAL &kp MINUS   &kp PLUS  &kp SQT                   &kp DQT   &kp LPAR &kp RPAR  &kp LBKT  &kp RBKT  &trans
-&trans    &kp STAR	&trans	  &trans	  &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans    &kp SEMI  &trans
+&trans    &trans	&trans	  &trans	  &trans    &trans                    &trans    &trans   &trans    &trans       &trans    &trans
+&trans	  &trans	&kp HASH  &kp trans	  &kp trans &trans                    &trans    &kp LBRC &kp RBRC  &kp K_CMENU  &trans    &trans
+&trans    &kp BSLH  &kp EQUAL &kp MINUS   &kp PLUS  &kp SQT                   &kp DQT   &kp LPAR &kp RPAR  &kp LBKT     &kp RBKT  &trans
+&trans    &kp STAR	&trans	  &trans	  &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans       &kp SEMI  &trans
                     &trans    &trans      &trans    &trans     &trans &trans  &trans    &trans   &trans    &trans
             >;
 
