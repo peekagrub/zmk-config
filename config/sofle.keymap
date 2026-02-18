@@ -69,12 +69,6 @@
             tapping-term-ms = <200>;
             bindings = <&kp RCTRL>, <&sl SYMBOLS>;
         };
-
-        ptt: push_to_talk {
-            compatible = "zmk,behavior-macros";
-            #binding-cells = <0>;
-            bindings = <&kp RALT &kp P>;
-        };
     };
 
     keymap {
@@ -93,7 +87,7 @@
 &kp ESC   &kp Q  &kp W		&kp E       &kp R	    &kp T								&kp Y     &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp TAB   &kp A  &kp S		&kp D		&kp F		&kp G								&kp H     &kp J     &kp K     &kp L    &kp SEMI &kp SQT
 &cdl      &kp Z  &kp X		&kp C       &kp V       &kp B     &kp C_MUTE    &to GAMING1 &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &cdr
-                 &kp LGUI	&kp LALT    &td_lctrl   &td_low   &kp ENTER		&kp SPACE   &td_rai   &td_rctrl &kp RALT  &ptt
+                 &kp LGUI	&kp LALT    &td_lctrl   &td_low   &kp ENTER		&kp SPACE   &td_rai   &td_rctrl &kp RALT  &kp LALT(P)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
@@ -169,7 +163,7 @@
 &kp ESC   &kp Q  &kp F		&kp E       &kp R	    &kp T								&kp Y     &kp U     &kp I     &kp O    &kp P    &kp BSPC
 &kp TAB   &kp S  &kp A		&kp W		&kp D		&kp G								&kp H     &kp J     &kp K     &kp L    &kp SEMI &kp ESC
 &cdl      &kp Z  &kp X		&kp C       &kp V       &kp B     &kp C_MUTE    &to BASE    &kp N     &kp M     &kp COMMA &kp DOT  &kp FSLH &cdr
-                &kp LGUI	&kp LALT    &kp KP_N3   &kp KP_N1 &kp ENTER		&kp SPACE   &kp KP_N2 &kp KP_N4 &kp RALT  &ptt
+                &kp LGUI	&kp LALT    &kp KP_N3   &kp KP_N1 &kp ENTER		&kp SPACE   &kp KP_N2 &kp KP_N4 &kp RALT  &kp LALT(P)
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
